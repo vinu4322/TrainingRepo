@@ -1,0 +1,77 @@
+1. What is AWS RDS?
+Amazon Relational Database Service (RDS) is a distributed relational database service provided by Amazon Web Services. 
+It is a web service that runs "in the cloud" and is designed to facilitate the setup, operation, and scaling of a relational database to be used in applications.
+
+2. What is RDS DB instance?
+ A DB instance is a standalone database environment in the AWS Cloud. 
+Your DB instance may include numerous user-created databases. 
+You can access your DB instance with the same tools and applications that you would use to access a standalone database instance.
+
+3. Which database engines are supported with Amazon RDS?
+MySQL
+PostgreSQL
+MySQL
+MariaDB
+Oracle
+Microsoft SQL Server
+
+4. What is the maximum number DB instances can user can run with Amazon RDS?
+User are allowed to have up to 40 Amazon RDS DB instances by default. Under the "License Included" model, up to 10 from those 40 can be Oracle or SQL Server DB instances.
+
+5. Is it possible for a user to have multiple databases on RDS?
+RDS for MySQL
+.No limit imposed by software. The MySQL standard for RDS MySQL database instances is that there is no limit on the number of databases (http://dev.mysql.com/doc/refman/5.5/en/database-count-limit.html).
+RDS for Oracle
+.1 database per instance, no limit on number of schemas per database.
+RDS for SQL Server
+.30 databases per instance.
+RDS for PostgreSQL
+.No limit imposed by software.
+
+6. How to upgrade Amazon RDS instances?
+The modify-db-instance command can be used to upgrade Amazon RDS instances. Data migration is not required. However there would be some downtime/OutageTime roughly 5 minutes.
+
+7. What are the top Alternatives to Amazon RDS?
+Amazon Redshift
+Apache Aurora
+MySQL, Oracle
+Heroku Postgres
+
+8. How to enable automated backups in RDS?
+You can enable automated backups in RDS in below ways:
+
+Using RDS API
+  You can use the RDS API ModifyDBInstance operation to enable automated backups in RDS with the following required parameters:
+  DBInstanceIdentifier
+  BackupRetentionPeriod
+From AWS Console
+   Sign in to the AWS and go to Amazon RDS console at https://console.aws.amazon.com/rds/.
+  Navigation pane -> Select databases -> Select DB instance that you want to modify.
+  Select Backup retention period -> Provide a nonzero positive value, like 5 days.
+  Choose Continue -> Choose Apply immediately.
+
+9. How AWS RDS ensure high availability and reliability?
+AWS RDS allows multi-AZ deployment to ensure high availability and reliability.
+
+	With the use of multi-AZ deployment feature, AWS automatically provisions and maintains a synchronous standby replica in a different Availability Zone.
+	AWS synchronously replicates the data from the primary to the secondary database instance.
+	Failover Support: In case if the primary database instance fails or gets shut down in any way, AWS will automatically fail over to another secondary database instance.
+
+10. Which RDS database engines support multi-AZ deployment?
+AWS RDS allows multi-AZ deployment to ensure high availability and reliability. Multi-AZ deployments support can be used for below RDS database engine:
+MariaDB
+MySQL
+Oracle
+PostgreSQL
+
+11. Which Amazon RDS database engine by default supports multi-AZ deployments?
+
+Amazon RDS offers Multi-AZ deployments with Always On AGs for the listed SQL Server versions and editions:
+
+SQL Server 2019 - Standard and Enterprise Editions.
+SQL Server 2017 - Enterprise Edition 14.00. 3049.1 or higher.
+
+12. 
+
+
+
